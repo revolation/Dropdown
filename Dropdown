@@ -1,0 +1,49 @@
+<html><head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="css/Style.css">
+</head>
+
+<body>
+		<ul class="nav">
+    		<li>
+				<a href="#">Anasayfa</a>
+            </li>
+            <li>
+				<a href="#">Hakkımızda</a>
+                	<ul>
+                    	<li>
+                        	<a href="#">Misyon</a>
+                         </li>
+                         
+                         <li>
+                         	<a href="#">Vizyon</a>
+                            	<ul>
+                                	<li><a href="#">Alt Menü 1</a></li>
+                                   	<li><a href="#">Alt Menü 2</a></li>
+                                   	<li><a href="#">Alt Menü 3</a></li>
+                                </ul>
+                         </li>
+                    </ul>
+            </li>
+            <li>
+				<a href="#">Galeri</a>
+                	<ul>
+                    	<li><a href="#">Şubelerimiz</a></li>
+                    	<li><a href="#">Genel Merkezimiz</a></li>
+                    	<li><a href="#">Çalışanlarımız</a></li>
+                    	<li><a href="#">Ürünlerimiz</a></li>     
+                    </ul>
+            </li>
+            <li>
+				<a href="#">İletişim</a>
+                <ul>
+                    	<li><a href="#">Bizi Arayın</a></li>
+                    	<li><a href="#">Sizi Arayalım</a></li>     
+                    </ul>
+            </li>
+
+    	</ul>
+
+
+</body></html>
