@@ -1,0 +1,105 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.nav {
+	float: left;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.nav li {
+	float: left;
+}
+
+.nav li a {
+	float: left;
+	width: 200px;
+	height: 40px;
+	background: #0cf;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 20px;
+	color: #ffffff;
+	text-decoration: none;
+	line-height: 40px; /*yazıyı dikeyde bulunduğu alan içinde ortalarız*/
+	text-align: center; /*yazıyı yatayda bulunduğu alan içinde ortalarız*/
+}
+
+.nav li:hover a {
+	background: #3c9;
+	transition: width .5s ease-in-out, background .3s ease;
+}
+
+.nav li ul {
+/*	float: left; listenin altında liste olması için float silinir. yerine position yazılır. yeri kesin olduğundan absolute denir*/
+	position: absolute; /*kullandığımız için top ve left eklereyek yazıları istediğimiz yere getiririz*/
+	top: 40px;
+	left: 0;
+	padding: 0;
+	list-style: none;
+	margin: 0;
+	display: none; /*bu kod menü altında bulunan menülerin altında düzensiz bulunan listeleri kaldırmaya yarar*/
+}
+
+.nav li {
+	position: relative; /*nav li ul içinde liste yapıp menü altına menü getirdiğimiz için bir üstteki elemente position relative dememiz gerekiyor.*/
+}
+
+/*
+.nav li:hover ul { hover durumu nav içinde bulunan li ye uygulanacağından dolayı hover buraya yazılır
+	display: block;
+}*/
+
+/*yukarıdaki kod yerine çocuk seçiciyi kullanalım*/
+
+.nav > li:hover > ul {
+	display: block;
+}
+
+.nav li ul li a {
+	background: #3c9;
+}
+
+.nav li ul li a:hover {
+	background: #369;
+	transition: width .5s ease-in-out, background .3s ease;
+}
+
+.nav li ul li:hover li ul { /*hover durumu nav içinde bulunan li ye uygulanacağından dolayı hover buraya yazılır*/
+	display: block;
+}
+
+.nav li ul li ul {
+/*	float: left; listenin altında liste olması için float silinir. yerine position yazılır. yeri kesin olduğundan absolute denir*/
+	top: 0;
+	left: 200px;/*yada genişlik değişecbileceği gibi durumlarda 100% deriz*/
+	display: none; /*bu kod menü altında bulunan menülerin altında düzensiz bulunan listeleri kaldırmaya yarar*/
+	position: absolute; /*kullandığımız için top ve left eklereyek yazıları istediğimiz yere getiririz*/
+	padding: 0;
+	list-style: none;
+	margin: 0;
+	
+}
+
+/*daha önce yukarıda verdiğimiz kodlarda nav li:hover dediğimiz için burada da şunu diyebiliriz*/
+/*Uzun Yolu 
+.nav li:hover ul li ul {
+	display: none;
+}*/
+
+/*Kısa yol*/
+
+.nav >li:hover > ul > li:hover > ul {
+	display: block;
+}
+
+
+.nav li ul li {
+	position: relative; /*nav li ul içinde liste yapıp menü altına menü getirdiğimiz için bir üstteki elemente position relative dememiz gerekiyor.*/
+}
+
+.nav li ul li ul a:hover {
+	background: #F00;
+	transition: width .5s ease-in-out, background .3s ease;
+}
+
